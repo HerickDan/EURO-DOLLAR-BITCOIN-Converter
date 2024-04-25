@@ -2,7 +2,7 @@ let cotacao = document.querySelector('#cotacao')
 const urlBRL = 'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL'
 const valorReal =  document.querySelector('#valorDigitado')
 const lerValor = valorReal.value
-
+cotacao.className='cotacao'
 
 async function devineValorDolar(){
     try{
@@ -10,25 +10,23 @@ async function devineValorDolar(){
         const data = await response.json()
         const precoDolar = Number(data.USDBRL.high)
         const duasCasasDolar = precoDolar.toFixed(2) 
-        cotacao.innerHTML += `Preço do dolar R$${duasCasasDolar}<br>`
-        console.log(data)
-        console.log(typeof precoDolar)
-        return precoDolar
+        let p = document.createElement('p')
+        p.innerHTML += `Preço do dolar R$${duasCasasDolar}`
+        cotacao.appendChild(p)
     }
     catch{
         console.log(`Houve um erro: ${Error}`)
     }
 }
-async function devineValoBtc(){
+async function devineValorBtc(){
     try{
         const response = await fetch(urlBRL);
         const data = await response.json()
         const precoBtc = Number(data.BTCBRL.high)
         const duasCasasBtc= precoBtc.toFixed(2) 
-        cotacao.innerHTML += `Preço do Bitcoin R$${duasCasasBtc}`
-        console.log(data)
-        console.log(typeof precoDolar)
-        return precoDolar
+        let p = document.createElement('p')
+        p.innerHTML += `Preço do Bitcoin R$${duasCasasBtc}`
+        cotacao.appendChild(p)  
     }
     catch{
         console.log(`Houve um erro: ${Error}`)
@@ -40,10 +38,9 @@ async function defineValorEuro() {
         const data = await response.json()
         const precoEur = Number(data.EURBRL.high)
         const duasCasasEur= precoEur.toFixed(2) 
-        cotacao.innerHTML += `Preço do Bitcoin R$${duasCasasEur}`
-        console.log(data)
-        console.log(typeof precoDolar)
-        return precoDolar
+        let p = document.createElement('p')
+        p.innerHTML += `Preço do Euro R$${duasCasasEur}`
+        cotacao.appendChild(p) 
     }
     catch{
         console.log(`Houve um erro: ${Error}`)
@@ -98,4 +95,5 @@ async function calcula(){
     }
 }
 devineValorDolar()
-devineValoBtc()
+devineValorBtc()
+defineValorEuro()
