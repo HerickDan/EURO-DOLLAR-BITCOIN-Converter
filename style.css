@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#content{
+    width: 100%;
+    height: 100vh;
+    background-color: #53f9aa;
+}
+header{
+    width: 100%;
+    text-align: center;
+}
+.moedas{
+    border: none;
+}
+.moedas:-moz-focusring{
+    width: 50px;
+    border:none
+}
+#valorDigitado{
+    border:none;
+    width: 20%;
+    outline: none;
+    border-bottom: solid 1px black
+}
+#datas{
+    display: flex;
+    width: 20%;
+}
+#resultado{
+    border-bottom: solid 1px black
+}

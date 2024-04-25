@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div >
-        <h1>
-          Faça a cotação do real para dólar
-        </h1>
-        <p id="cotacao"></p>
+            <article id="content">
+                <header>
+                    <h1>
+                        Faça sua cotação 
+                    </h1>
+                </header>
+                <p id="cotacao"></p>
 
-        <input type="number" id="valorDigitado">
-        <button onclick="calcula()">Calcula</button>
-        <p id="resultado"></p>
-    </div>
+                <article id="datas">
+                    <input type="number" id="valorDigitado" >
+                    <p>=</p>
+                    <div id="resultado"></div>
+                </article>
+
+                <button onclick="calcula()">Calcula</button>
+
+                <select name="" id="moedas" class="moedas">
+                    <option value="DOLAR">DOLAR</option>
+                    <option value="EURO">EURO</option>
+                    <option value="BITCOIN">BITCOIN</option>
+                </select>
+            </article>
      <script src="ex.js" defer></script>
 </body>
 </html>
