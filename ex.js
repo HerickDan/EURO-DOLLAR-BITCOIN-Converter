@@ -11,7 +11,12 @@ async function devineValorDolar(){
         const precoDolar = Number(data.USDBRL.high)
         const duasCasasDolar = precoDolar.toFixed(2) 
         let p = document.createElement('p')
-        p.innerHTML += `Preço do dolar R$${duasCasasDolar}`
+        p.classList='precoMoeda'
+        const img = document.createElement('img')
+        img.src='/Dolar.png'
+        img.className='image'
+        p.innerHTML += `Dolar: R$${duasCasasDolar}`
+        p.appendChild(img)
         cotacao.appendChild(p)
     }
     catch{
@@ -25,7 +30,12 @@ async function devineValorBtc(){
         const precoBtc = Number(data.BTCBRL.high)
         const duasCasasBtc= precoBtc.toFixed(2) 
         let p = document.createElement('p')
-        p.innerHTML += `Preço do Bitcoin R$${duasCasasBtc}`
+        p.classList='precoMoeda'
+        const img = document.createElement('img')
+        img.src='/Bitcoin.png'
+        img.className='image'
+        p.innerHTML += `Bitcoin: R$${duasCasasBtc}`
+        p.appendChild(img)
         cotacao.appendChild(p)  
     }
     catch{
@@ -38,8 +48,13 @@ async function defineValorEuro() {
         const data = await response.json()
         const precoEur = Number(data.EURBRL.high)
         const duasCasasEur= precoEur.toFixed(2) 
+        const img = document.createElement('img')
+        img.src='/Euro.png'
+        img.className='image'
         let p = document.createElement('p')
-        p.innerHTML += `Preço do Euro R$${duasCasasEur}`
+        p.classList='precoMoeda'
+        p.innerHTML += ` Euro: R$${duasCasasEur}`
+        p.appendChild(img)
         cotacao.appendChild(p) 
     }
     catch{
