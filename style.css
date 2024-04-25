@@ -12,6 +12,8 @@
 header{
     width: 100%;
     text-align: center;
+    background-color: #0f003f;
+    color:#f9eced
 }
 .moedas{
     border: none;
@@ -32,4 +34,10 @@ header{
 }
 #resultado{
     border-bottom: solid 1px black
+}
+
+.cotacao{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 160px;
 }
