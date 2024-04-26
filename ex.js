@@ -70,7 +70,7 @@ async function calcDolar(){
     const data = await response.json()
     const precoDolar = Number(data.USDBRL.high)
     let multiplica = lerValor*precoDolar
-    const resultado = document.querySelector('#resultado').innerHTML=multiplica.toFixed(2)
+    const resultado = document.querySelector('#resultado').innerHTML=`R$${multiplica.toFixed(2)}`
 }
 async function calcEuro(){
     const valorReal =  document.querySelector('#valorDigitado')
@@ -79,7 +79,7 @@ async function calcEuro(){
     const data = await response.json()
     const precoDolar = Number(data.EURBRL.high)
     let multiplica = lerValor*precoDolar
-    const resultado = document.querySelector('#resultado').innerHTML=multiplica.toFixed(2)
+    const resultado = document.querySelector('#resultado').innerHTML=`R$${multiplica.toFixed(2)}`
 }
 async function calcBtc(){
     const valorReal =  document.querySelector('#valorDigitado')
@@ -88,7 +88,7 @@ async function calcBtc(){
     const data = await response.json()
     const precoBtc = Number(data.BTCBRL.high)
     let multiplica = lerValor*precoBtc
-    const resultado = document.querySelector('#resultado').innerHTML=multiplica.toFixed(2)
+    const resultado = document.querySelector('#resultado').innerHTML=`R$${multiplica.toFixed(2)}`
 }
 
 

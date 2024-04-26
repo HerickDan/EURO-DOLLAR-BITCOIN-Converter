@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CoinQuote</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <script src="ex.js" defer></script>
 </head>
 <body>
         <header class="cabecalho">    
             <h1 class="titulo">
-                 Faça sua cotação 
+                CoinQuote
             </h1>
             <nav>
                 <a href="https://www.infomoney.com.br/ultimas-noticias/" class="link">
@@ -28,21 +28,22 @@
             </nav>
         </header>
         <div id="cotacao"></div>
-
-        <article id="datas">
-            <input type="number" id="valorDigitado" >
-            <p>=</p>
-            <div id="resultado"></div>
-        </article>
-
-        <button onclick="calcula()">Calcula</button>
-
-        <select name="" id="moedas" class="moedas">
-            <option value="DOLAR">DOLAR</option>
-            <option value="EURO">EURO</option>
-            <option value="BITCOIN">BITCOIN</option>
-        </select>
-            
-     <script src="ex.js" defer></script>
+        
+        <section class="funcionalidade">
+            <h2>
+                Realize a cotação das principais moedas do mundo
+            </h2>
+            <select name="" id="moedas" class="moedas">
+                <option value="DOLAR">DOLAR</option>
+                <option value="EURO">EURO</option>
+                <option value="BITCOIN">BITCOIN</option>
+            </select>
+            <article id="datas">
+                <input type="number" id="valorDigitado" >
+                <p style="font-size: 80px;">=</p>
+                <div id="resultado"></div>
+            </article>
+            <button onclick="calcula()" class="botao">Calcular</button>
+        </section>
 </body>
 </html>

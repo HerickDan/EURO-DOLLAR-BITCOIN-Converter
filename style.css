@@ -4,11 +4,6 @@
     font-family:  Poppins, sans-serif;;
 }
 
-#content{
-    width: 100%;
-    height: 100vh;
-    background-color: #53f9aa;
-}
 .cabecalho{
     width: 100%;
     background-color: #0f003f;
@@ -23,23 +18,33 @@
 }
 .moedas{
     border: none;
+    background-color: #dcf7f3;
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
 }
-.moedas:-moz-focusring{
-    width: 50px;
-    border:none
+#datas{
+    display: flex;
+    justify-content: center;
+    width: 80%;
 }
 #valorDigitado{
     border:none;
     width: 20%;
     outline: none;
-    border-bottom: solid 1px black
+    background-color: #dcf7f3;
+    border-bottom: solid 1px black;
+    font-size:70px;
+    text-align: center;
 }
-#datas{
-    display: flex;
-    width: 20%;
-}
+
 #resultado{
-    border-bottom: solid 1px black
+    border:none;
+    width: 20%;
+    outline: none;
+    border-bottom: solid 1px black;
+    font-size:70px;
+    text-align: center;
 }
 
 .cotacao{
@@ -68,4 +73,21 @@
 .image{
     width: 30px;
     height: 30px;
+}
+.botao{
+    width: 20%;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #5fbbc0;
+    border: solid 1px black;
+}
+.funcionalidade{
+    width: 100%;
+    height: 46.9vh;
+    padding: 80px 0px;
+    display: flex;
+    background-color: #dcf7f3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
