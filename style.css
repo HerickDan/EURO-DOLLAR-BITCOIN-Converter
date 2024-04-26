@@ -15,6 +15,22 @@
 }
 .titulo{
     margin-left: 20px;
+    align-items: center;
+    display: flex;
+}
+@keyframes girar360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+#logoCoinQuot{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    animation: girar360 4s linear infinite;
 }
 .moedas{
     border: none;
@@ -27,6 +43,7 @@
     display: flex;
     justify-content: center;
     width: 80%;
+    margin-bottom: 30px;
 }
 #valorDigitado{
     border:none;
@@ -90,4 +107,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+.subtitulo{
+    position: relative;
+    margin-top: -60px;
+    margin-bottom: 30px;
 }

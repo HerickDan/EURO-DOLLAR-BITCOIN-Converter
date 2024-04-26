@@ -13,7 +13,7 @@ async function devineValorDolar(){
         let p = document.createElement('p')
         p.classList='precoMoeda'
         const img = document.createElement('img')
-        img.src='/Dolar.png'
+        img.src='./images/Dolar.png'
         img.className='image'
         p.innerHTML += `Dolar: R$${duasCasasDolar}`
         p.appendChild(img)
@@ -32,7 +32,7 @@ async function devineValorBtc(){
         let p = document.createElement('p')
         p.classList='precoMoeda'
         const img = document.createElement('img')
-        img.src='/Bitcoin.png'
+        img.src='./images/Bitcoin.png'
         img.className='image'
         p.innerHTML += `Bitcoin: R$${duasCasasBtc}`
         p.appendChild(img)
@@ -49,7 +49,7 @@ async function defineValorEuro() {
         const precoEur = Number(data.EURBRL.high)
         const duasCasasEur= precoEur.toFixed(2) 
         const img = document.createElement('img')
-        img.src='/Euro.png'
+        img.src='./images/Euro.png'
         img.className='image'
         let p = document.createElement('p')
         p.classList='precoMoeda'
